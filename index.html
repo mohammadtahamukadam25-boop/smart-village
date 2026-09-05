@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Village | IT Enablement Project</title>
+<meta content="Smart Village IT Enablement Project - Digital awareness, education, government scheme awareness, healthcare, agriculture, jobs and emergency information for rural communities." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --green:#176b45;
+    --green2:#23945e;
+    --light-green:#eaf7ef;
+    --cream:#f7f8f2;
+    --dark:#10251b;
+    --text:#506057;
+    --white:#ffffff;
+    --orange:#f39a3f;
+    --red:#d94b4b;
+    --shadow:0 15px 40px rgba(16,37,27,.08);
+    --radius:22px;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    background:var(--cream);
+    color:var(--dark);
+    line-height:1.6;
+}
+
+h1,h2,h3,h4{
+    font-family:Poppins,sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,input,select,textarea{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement{
+    background:var(--green);
+    color:white;
+    padding:9px 0;
+    font-size:13px;
+}
+
+.announcement .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+
+.nav-inner{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:15px;
+    background:var(--green);
+    color:white;
+    display:grid;
+    place-items:center;
+    font-size:25px;
+}
+
+.logo h2{
+    font-size:18px;
+}
+
+.logo small{
+    color:#718078;
+    font-size:11px;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:600;
+    color:#425048;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.nav-buttons{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.lang{
+    border:1px solid #dce5df;
+    border-radius:10px;
+    padding:9px;
+    background:white;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    padding:13px 21px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.25s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+}
+
+.btn-primary{
+    background:var(--green);
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#0f5133;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    background:white;
+    color:var(--green);
+    border:1px solid var(--green);
+}
+
+.btn-outline:hover{
+    background:var(--light-green);
+}
+
+.menu-btn{
+    display:none;
+    border:none;
+    background:none;
+    font-size:27px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:650px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(90deg,rgba(5,38,23,.88),rgba(5,38,23,.52),rgba(5,38,23,.2)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+    color:white;
+}
+
+.hero-content{
+    max-width:720px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 13px;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,68px);
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:650px;
+    color:#e9f2ec;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero .btn-outline{
+    background:rgba(255,255,255,.12);
+    color:white;
+    border-color:white;
+}
+
+.stats-card{
+    position:absolute;
+    right:6%;
+    bottom:45px;
+    width:330px;
+    padding:24px;
+    background:rgba(255,255,255,.14);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:22px;
+}
+
+.stats-card h3{
+    margin-bottom:5px;
+}
+
+.demo-note{
+    font-size:11px;
+    opacity:.8;
+    margin-bottom:15px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.stat{
+    padding:14px;
+    border-radius:15px;
+    background:rgba(255,255,255,.12);
+}
+
+.stat strong{
+    display:block;
+    font-size:22px;
+}
+
+.stat span{
+    font-size:11px;
+}
+
+/* COMMON */
+
+section{
+    padding:90px 0;
+}
+
+.section-head{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+.section-head .tag{
+    color:var(--green);
+    font-weight:800;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.section-head h2{
+    font-size:38px;
+    margin:8px 0 12px;
+}
+
+.section-head p{
+    color:var(--text);
+}
+
+/* QUICK ACCESS */
+
+.quick{
+    background:white;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.quick-card{
+    padding:25px;
+    border-radius:var(--radius);
+    background:var(--cream);
+    border:1px solid #e4ebe6;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.quick-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+    border-color:#b9d9c6;
+}
+
+.icon{
+    width:52px;
+    height:52px;
+    border-radius:15px;
+    display:grid;
+    place-items:center;
+    background:var(--light-green);
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.quick-card h3{
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.quick-card p{
+    font-size:13px;
+    color:var(--text);
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:800px;
+    margin:0 auto 35px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:20px 25px;
+    border:1px solid #dbe5de;
+    border-radius:18px;
+    outline:none;
+    font-size:16px;
+    background:white;
+    box-shadow:var(--shadow);
+}
+
+.search-box span{
+    position:absolute;
+    right:20px;
+    top:16px;
+    font-size:24px;
+}
+
+/* DIGITAL HUB */
+
+.hub{
+    background:#f0f7f2;
+}
+
+.hub-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.hub-card{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+    transition:.25s;
+}
+
+.hub-card:hover{
+    transform:translateY(-5px);
+}
+
+.hub-card .icon{
+    background:#f1f7e9;
+}
+
+.hub-card h3{
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.hub-card p{
+    color:var(--text);
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.learn{
+    color:var(--green);
+    font-size:13px;
+    font-weight:800;
+}
+
+/* FEATURES */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    height:500px;
+    border-radius:30px;
+    background:
+    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
+    url("https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1000&q=80")
+    center/cover;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    padding:18px;
+    border-radius:16px;
+    background:#f4f8f4;
+}
+
+.feature strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.feature span{
+    font-size:13px;
+    color:var(--text);
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:22px;
+    padding:26px;
+    box-shadow:var(--shadow);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.card p{
+    color:var(--text);
+    font-size:14px;
+}
+
+.card-footer{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* SCHEMES */
+
+.schemes{
+    background:#f0f7f2;
+}
+
+.filters{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.filter-btn{
+    border:1px solid #d4e2d9;
+    background:white;
+    padding:10px 16px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:var(--green);
+    color:white;
+}
+
+.scheme-card{
+    border-top:5px solid var(--green);
+}
+
+.scheme-label{
+    display:inline-block;
+    font-size:11px;
+    background:#e7f5ec;
+    color:var(--green);
+    padding:5px 9px;
+    border-radius:20px;
+    font-weight:800;
+}
+
+/* LEARNING */
+
+.course-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.course-top{
+    display:flex;
+    justify-content:space-between;
+}
+
+.level{
+    font-size:11px;
+    padding:5px 9px;
+    border-radius:20px;
+    background:#fff3df;
+}
+
+/* EMERGENCY */
+
+.emergency{
+    background:#fff5f3;
+}
+
+.emergency-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.emergency-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    border:1px solid #f1d6d2;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.emergency-icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    display:grid;
+    place-items:center;
+    background:#ffe8e4;
+    font-size:25px;
+}
+
+.emergency-card strong{
+    display:block;
+    font-size:20px;
+}
+
+.call{
+    margin-left:auto;
+    background:var(--red);
+    color:white;
+    padding:10px 14px;
+    border-radius:10px;
+    font-size:12px;
+    font-weight:800;
+}
+
+/* SAFETY */
+
+.safety-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.do-card{
+    padding:30px;
+    background:white;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+}
+
+.do-card ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+.do-card li{
+    padding:10px 0;
+    border-bottom:1px solid #edf1ee;
+    font-size:14px;
+}
+
+/* HOW */
+
+.how{
+    background:var(--green);
+    color:white;
+}
+
+.how .section-head p{
+    color:#d4eadc;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    text-align:center;
+    position:relative;
+}
+
+.step-number{
+    width:70px;
+    height:70px;
+    margin:auto auto 18px;
+    display:grid;
+    place-items:center;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:50%;
+    font-size:26px;
+    font-weight:800;
+}
+
+.step p{
+    color:#d4eadc;
+    font-size:13px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    height:250px;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    position:relative;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px 18px 15px;
+    color:white;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+
+/* NEWS */
+
+.news-card{
+    padding:0;
+    overflow:hidden;
+}
+
+.news-image{
+    height:180px;
+}
+
+.news-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.news-content{
+    padding:22px;
+}
+
+.news-date{
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:35px;
+}
+
+.contact-info{
+    background:var(--green);
+    color:white;
+    padding:35px;
+    border-radius:25px;
+}
+
+.contact-info p{
+    color:#d8eadf;
+    margin:15px 0 25px;
+}
+
+.contact-item{
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.form{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    font-size:13px;
+    font-weight:700;
+}
+
+.field input,
+.field select,
+.field textarea{
+    padding:13px;
+    border:1px solid #dbe4de;
+    border-radius:10px;
+    outline:none;
+}
+
+.field textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.success{
+    display:none;
+    padding:14px;
+    margin-top:15px;
+    background:#e7f7ed;
+    color:var(--green);
+    border-radius:10px;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d2419;
+    color:white;
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+footer p,
+footer a{
+    color:#b7c9bf;
+    font-size:13px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.copyright{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    color:#91a99c;
+    font-size:12px;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:rgba(0,0,0,.65);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+    width:min(650px,100%);
+    max-height:85vh;
+    overflow:auto;
+    border-radius:25px;
+    padding:30px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    border:none;
+    background:#edf3ef;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* ===== INTERACTIVE HUB / LANGUAGE / LOGIN ===== */
+.hub-info-list{margin:14px 0 0 18px;color:var(--text);line-height:1.8}
+.hub-info-list li{margin-bottom:6px}
+.login-form{display:grid;gap:12px;margin-top:18px}
+.login-form input{padding:13px;border:1px solid #dbe4de;border-radius:10px;outline:none}
+.login-note{font-size:12px;color:var(--text);margin-top:10px}
+.user-badge{display:inline-flex;align-items:center;gap:7px;background:#e7f7ed;color:var(--green);padding:8px 11px;border-radius:10px;font-size:12px;font-weight:800}
+body.dark-mode .login-form input{background:#101713;color:#edf7f0;border-color:#385044}
+body.dark-mode .user-badge{background:#203a2b}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        background:white;
+        padding:25px;
+        flex-direction:column;
+        box-shadow:0 15px 30px rgba(0,0,0,.1);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .stats-card{
+        display:none;
+    }
+
+    .quick-grid,
+    .hub-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:750px){
+
+    section{
+        padding:65px 0;
+    }
+
+    .hero{
+        min-height:620px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .quick-grid,
+    .hub-grid,
+    .cards,
+    .emergency-grid,
+    .gallery,
+    .steps,
+    .footer-grid,
+    .about-grid,
+    .contact-grid,
+    .safety-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feature-grid,
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .about-image{
+        height:350px;
+    }
+
+    .section-head h2{
+        font-size:30px;
+    }
+
+    .announcement .container{
+        flex-direction:column;
+        gap:4px;
+        text-align:center;
+    }
+
+    .logo small{
+        display:none;
+    }
+
+    .nav-buttons .btn{
+        display:none;
+    }
+
+}
+
+
+/* ===== ADVANCED FEATURES ===== */
+body.dark-mode{
+    --cream:#101713; --dark:#edf7f0; --text:#b8c9bf; --white:#17221c;
+    background:#101713;
+}
+body.dark-mode .navbar,
+body.dark-mode .quick,
+body.dark-mode .card,
+body.dark-mode .hub-card,
+body.dark-mode .do-card,
+body.dark-mode .form,
+body.dark-mode .filter-btn,
+body.dark-mode .modal-box,
+body.dark-mode .quick-card{background:#17221c;color:#edf7f0;border-color:#2d4035}
+body.dark-mode .hub,body.dark-mode .schemes{background:#132019}
+body.dark-mode .field input,body.dark-mode .field select,body.dark-mode .field textarea{background:#101713;color:#edf7f0;border-color:#385044}
+body.dark-mode .nav-links{background:#17221c}
+body.dark-mode .nav-links a{color:#d9e8df}
+body.dark-mode .feature{background:#1d2a22}
+body.dark-mode .lang{background:#17221c;color:#edf7f0}
+body.dark-mode .close{background:#26382e;color:#fff}
+
+.theme-toggle{
+    border:1px solid #dce5df;background:white;border-radius:10px;
+    padding:9px 11px;cursor:pointer;font-size:16px;
+}
+.progress-bar{
+    position:fixed;top:0;left:0;height:4px;width:0;background:var(--orange);
+    z-index:5000;transition:width .05s linear;
+}
+.section-links{
+    margin-top:28px;padding:18px 20px;background:rgba(35,148,94,.08);
+    border:1px solid rgba(35,148,94,.18);border-radius:18px;
+    display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;
+}
+.section-links strong{font-size:14px}
+.resource-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.official-btn,.save-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;
+    border:1px solid #cfe0d5;background:#fff;color:var(--green);
+    padding:9px 12px;border-radius:10px;font-size:12px;font-weight:800;cursor:pointer;
+}
+.official-btn:hover,.save-btn:hover{background:var(--light-green)}
+.save-btn.saved{background:#fff3df;border-color:#f1c98e}
+.scheme-card{position:relative}
+.scheme-card .save-corner{
+    position:absolute;right:18px;top:18px;border:0;background:#f3f7f4;
+    width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:16px;
+}
+.scheme-card .scheme-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.scheme-meta span{font-size:11px;background:#f4f7f5;padding:5px 8px;border-radius:20px;color:#56685e}
+.schemes-toolbar{
+    display:flex;gap:10px;max-width:900px;margin:0 auto 25px;flex-wrap:wrap;
+}
+.schemes-toolbar input{
+    flex:1;min-width:220px;padding:13px 16px;border:1px solid #d4e2d9;border-radius:12px;outline:none;
+}
+.quick-tool{
+    padding:16px;border-radius:15px;background:#fff;border:1px solid #e1e9e4;
+    display:flex;gap:12px;align-items:center;margin-top:20px;
+}
+.quick-tool input{flex:1;border:0;outline:0;font-size:14px}
+.no-results{display:none;text-align:center;padding:25px;color:var(--text);grid-column:1/-1}
+.back-top{
+    position:fixed;right:20px;bottom:20px;width:46px;height:46px;border:0;border-radius:50%;
+    background:var(--green);color:white;cursor:pointer;display:none;z-index:2000;font-size:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2)
+}
+.back-top.show{display:block}
+.modal-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.modal-links a{color:white}
+.disclaimer-strip{
+    padding:12px 16px;border-radius:12px;background:#fff8e9;border:1px solid #f2dfb0;
+    color:#6d5725;font-size:12px;margin-top:18px;
+}
+@media(max-width:750px){
+    .theme-toggle{display:none}
+    .section-links{align-items:flex-start}
+}
+
+
+.course-learning-panel,.skill-center-box{margin-top:24px;padding:24px;border:1px solid var(--border-color);border-radius:18px;background:var(--card-bg);box-shadow:var(--shadow)}
+.course-panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}.course-panel-head h3{margin:6px 0 0}.course-progress{height:8px;background:var(--muted-bg);border-radius:99px;overflow:hidden;margin:18px 0}.course-progress-bar{height:100%;width:0;transition:.35s}.course-panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.course-panel-grid h4{margin-bottom:6px}.course-panel-actions{display:flex;align-items:center;gap:14px;margin-top:18px}.course-complete{font-weight:700}.skill-center-box{display:flex;justify-content:space-between;align-items:center;gap:20px}.skill-center-box h3{margin:6px 0}.skill-actions{display:flex;gap:10px;flex-wrap:wrap}.news-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.filter-chip{border:1px solid var(--border-color);background:var(--card-bg);padding:8px 13px;border-radius:99px;cursor:pointer}.filter-chip.active{background:var(--primary);color:#fff}.news-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.news-card.hidden-news{display:none!important}
+@media(max-width:700px){.course-panel-grid{grid-template-columns:1fr}.skill-center-box{display:block}.skill-actions{margin-top:14px}.course-panel-head{align-items:center}}
+
+.course-intro{margin:8px 0 0;color:var(--text);font-size:14px;max-width:780px}
+.course-reader{display:grid;grid-template-columns:230px 1fr;gap:22px;margin-top:20px}
+.lesson-list{display:flex;flex-direction:column;gap:8px;max-height:560px;overflow:auto;padding-right:4px}
+.lesson-item{border:1px solid var(--border-color);background:var(--card-bg);border-radius:12px;padding:11px 12px;text-align:left;cursor:pointer;font-weight:700;color:var(--text)}
+.lesson-item.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.lesson-content{min-width:0}
+.lesson-number{font-size:12px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
+.lesson-content h2{margin:7px 0 15px}
+.lesson-content p{line-height:1.75;color:var(--text)}
+.lesson-content ul{padding-left:20px;color:var(--text);line-height:1.7}
+.lesson-box,.quiz-box{margin-top:18px;padding:18px;border-radius:15px;background:rgba(35,148,94,.07);border:1px solid rgba(35,148,94,.16)}
+.practice-box{background:rgba(255,165,0,.07);border-color:rgba(255,165,0,.18)}
+.quiz-question{font-weight:800;margin:10px 0}
+.quiz-options{display:flex;flex-wrap:wrap;gap:8px}
+.quiz-option{border:1px solid var(--border-color);background:var(--card-bg);padding:9px 12px;border-radius:10px;cursor:pointer}
+.quiz-option.correct{background:#dff5e7;border-color:#58ad78;color:#176a3a}
+.quiz-option.wrong{background:#fde5e5;border-color:#db7777;color:#8b2424}
+.quiz-feedback{margin-top:10px;font-weight:700}
+.lesson-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--border-color)}
+#lessonProgressText{font-size:12px;font-weight:800;color:var(--text)}
+@media(max-width:750px){.course-reader{grid-template-columns:1fr}.lesson-list{max-height:180px}.lesson-item{min-width:210px}.lesson-list{flex-direction:row;overflow-x:auto}}
+
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+<div class="container">
+<span>🌱 Building Digital Villages, Empowering Lives</span>
+<span>Help: 1800-XXX-XXXX   |   info@smartvillage.demo</span>
+</div>
+</div>
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="container nav-inner">
+<a class="logo" href="#home">
+<div class="logo-icon">🌱</div>
+<div>
+<h2>Smart Village</h2>
+<small>IT Enablement Project</small>
+</div>
+</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#hub">Digital Hub</a></li>
+<li><a href="#schemes">Schemes</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#agriculture">Agriculture</a></li>
+<li><a href="#healthcare">Healthcare</a></li>
+<li><a href="#jobs">Jobs</a></li>
+<li><a href="#emergency">Emergency</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="nav-buttons">
+<select aria-label="Language" class="lang" id="languageSelect" onchange="changeLanguage(this.value)">
+<option value="English">English</option>
+<option value="Hindi">हिन्दी</option>
+<option value="Urdu">اردو</option>
+</select>
+<button aria-label="Toggle dark mode" class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+</div>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<span class="badge">💻 Digital Awareness • Rural Empowerment</span>
+<h1>Smart Village — Better village, Better Tomorrow</h1>
+<p>
+One digital platform for awareness, learning, opportunities,
+essential information and a smarter rural life.
+</p>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="#hub">
+Explore Digital Hub →
+</a>
+<a class="btn btn-outline" href="#about">
+Learn About Project
+</a>
+</div>
+</div>
+</div>
+<div class="stats-card">
+<h3>Project Vision</h3>
+<p class="demo-note">
+Sample/demo statistics for college presentation.
+</p>
+<div class="stats-grid">
+<div class="stat">
+<strong>5000+</strong>
+<span>Villages Targeted</span>
+</div>
+<div class="stat">
+<strong>2M+</strong>
+<span>Citizens Awareness Goal</span>
+</div>
+<div class="stat">
+<strong>100+</strong>
+<span>Digital Resources</span>
+</div>
+<div class="stat">
+<strong>24×7</strong>
+<span>Information Access</span>
+</div>
+</div>
+</div>
+</section>
+<!-- QUICK ACCESS -->
+<section class="quick">
+<div class="container">
+<div class="section-head">
+<span class="tag">Quick Access</span>
+<h2>What Do You Need Today?</h2>
+<p>
+Find useful information quickly through one simple digital platform.
+</p>
+</div>
+<div class="quick-grid">
+<div class="quick-card" onclick="scrollToSection('schemes')">
+<div class="icon">🏛️</div>
+<h3>Government Schemes</h3>
+<p>Learn about scheme categories and eligibility guidance.</p>
+</div>
+<div class="quick-card" onclick="scrollToSection('education')">
+<div class="icon">🎓</div>
+<h3>Education</h3>
+<p>Explore digital courses and learning opportunities.</p>
+</div>
+<div class="quick-card" onclick="scrollToSection('agriculture')">
+<div class="icon">🌾</div>
+<h3>Farmer Help</h3>
+<p>Technology, farming and agriculture awareness.</p>
+</div>
+<div class="quick-card" onclick="scrollToSection('healthcare')">
+<div class="icon">🏥</div>
+<h3>Healthcare</h3>
+<p>Health information and healthcare guidance.</p>
+</div>
+<div class="quick-card" onclick="scrollToSection('jobs')">
+<div class="icon">💼</div>
+<h3>Jobs &amp; Skills</h3>
+<p>Career guidance and skill-development awareness.</p>
+</div>
+<div class="quick-card" onclick="scrollToSection('emergency')">
+<div class="icon">🚨</div>
+<h3>Emergency</h3>
+<p>Important emergency numbers and information.</p>
+</div>
+<div class="quick-card" onclick="scrollToSection('safety')">
+<div class="icon">🔐</div>
+<h3>Cyber Safety</h3>
+<p>Protect yourself from scams and online fraud.</p>
+</div>
+<div class="quick-card" onclick="scrollToSection('utilities')">
+<div class="icon">💧</div>
+<h3>Smart Utilities</h3>
+<p>Awareness about water, electricity and sanitation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- DIGITAL HUB -->
+<section class="hub" id="hub">
+<div class="container">
+<div class="section-head">
+<span class="tag">Digital Village</span>
+<h2>Your Digital Village Hub</h2>
+<p>
+Search and explore information designed to make digital life easier.
+</p>
+</div>
+<div class="search-box">
+<input id="globalSearch" onkeyup="searchResources()" placeholder="🔎 Search: scholarship, farmer, job, hospital, course..." type="text"/>
+<span>⌕</span>
+</div>
+<div class="hub-grid" id="resourceGrid">
+<div class="hub-card resource" data-name="government schemes services">
+<div class="icon">🏛️</div>
+<h3>Government Services</h3>
+<p>Understand digital government services and where to find official information.</p>
+<a class="learn" onclick="openHubInfo('Government Services')">Learn More →</a>
+</div>
+<div class="hub-card resource" data-name="agriculture farmer farming crop">
+<div class="icon">🌾</div>
+<h3>Agriculture</h3>
+<p>Learn about digital farming, weather awareness, crops and agriculture technology.</p>
+<a class="learn" onclick="openHubInfo('Agriculture')">Learn More →</a>
+</div>
+<div class="hub-card resource" data-name="health hospital healthcare doctor">
+<div class="icon">🏥</div>
+<h3>Healthcare</h3>
+<p>Healthcare information, telemedicine awareness and appointment guidance.</p>
+<a class="learn" onclick="openHubInfo('Healthcare')">Learn More →</a>
+</div>
+<div class="hub-card resource" data-name="education course learning school">
+<div class="icon">🎓</div>
+<h3>Education</h3>
+<p>Discover online learning, scholarships, computer literacy and skills.</p>
+<a class="learn" onclick="openHubInfo('Education')">Learn More →</a>
+</div>
+<div class="hub-card resource" data-name="job employment skills career">
+<div class="icon">💼</div>
+<h3>Jobs &amp; Skills</h3>
+<p>Career guidance, skill development and entrepreneurship awareness.</p>
+<a class="learn" onclick="openHubInfo('Jobs & Skills')">Learn More →</a>
+</div>
+<div class="hub-card resource" data-name="emergency police ambulance fire">
+<div class="icon">🚨</div>
+<h3>Emergency</h3>
+<p>Important emergency information and nationally recognized numbers.</p>
+<a class="learn" href="#emergency">View Numbers →</a>
+</div>
+<div class="hub-card resource" data-name="cyber safety fraud scam otp">
+<div class="icon">🔐</div>
+<h3>Cyber Safety</h3>
+<p>Learn how to stay safer from online fraud and scams.</p>
+<a class="learn" href="#safety">Stay Safe →</a>
+</div>
+<div class="hub-card resource" data-name="utilities water electricity">
+<div class="icon">💧</div>
+<h3>Smart Utilities</h3>
+<p>Water, electricity, sanitation, waste and infrastructure awareness.</p>
+<a class="learn" href="#utilities">Explore →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section id="about">
+<div class="container about-grid">
+<div class="about-image"></div>
+<div>
+<span class="tag">About Project</span>
+<h2>Empowering Villages With Technology</h2>
+<p style="color:var(--text);margin-top:15px">
+The Smart Village IT Enablement Project aims to reduce the digital divide
+by making useful digital information easier to understand and discover.
+</p>
+<p style="color:var(--text);margin-top:15px">
+The platform focuses on awareness around education, healthcare,
+agriculture, employment, government schemes, digital safety and
+community development.
+</p>
+<div class="feature-grid">
+<div class="feature">
+<strong>📡 Internet Connectivity</strong>
+<span>Awareness about digital connectivity.</span>
+</div>
+<div class="feature">
+<strong>💻 Digital Literacy</strong>
+<span>Learn essential digital skills.</span>
+</div>
+<div class="feature">
+<strong>🔐 Secure &amp; Reliable</strong>
+<span>Promote safer digital habits.</span>
+</div>
+<div class="feature">
+<strong>🤝 Community Driven</strong>
+<span>Technology for community empowerment.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="section-links"><strong>🌐 Explore official digital services</strong><a class="btn btn-primary" href="https://www.digitalindia.gov.in/" rel="noopener" target="_blank">Digital India ↗</a></div>
+</section>
+<!-- SCHEMES -->
+<section class="schemes" id="schemes">
+<div class="container">
+<div class="section-head">
+<span class="tag">Government Awareness</span>
+<h2>Government Schemes &amp; Benefits</h2>
+<p>
+Explore scheme categories and learn how to verify information through
+official sources.
+</p>
+</div>
+<div class="filters">
+<button class="filter-btn active" onclick="filterSchemes('all',this)">All</button>
+<button class="filter-btn" onclick="filterSchemes('education',this)">Education</button>
+<button class="filter-btn" onclick="filterSchemes('agriculture',this)">Agriculture</button>
+<button class="filter-btn" onclick="filterSchemes('healthcare',this)">Healthcare</button>
+<button class="filter-btn" onclick="filterSchemes('employment',this)">Employment</button>
+<button class="filter-btn" onclick="filterSchemes('housing',this)">Housing</button>
+</div>
+<div class="schemes-toolbar">
+<input id="schemeSearch" oninput="searchSchemes()" placeholder="🔎 Search schemes: women, farmer, scholarship, health, housing..." type="search"/>
+</div>
+<div class="cards" id="schemeCards">
+<div class="card scheme-card" data-category="women" data-search="ladki bahin women mazi ladki bahin">
+<button class="save-corner" onclick="toggleSave(this,'Mukhyamantri Mazi Ladki Bahin Yojana')" title="Save scheme">☆</button>
+<span class="scheme-label">Women • Maharashtra</span>
+<h3>Mukhyamantri Mazi Ladki Bahin Yojana</h3>
+<p>A Maharashtra Government women-focused scheme. Check the latest eligibility, documents and application guidance on the official Women &amp; Child Development Department portal.</p>
+<div class="scheme-meta"><span>Women welfare</span><span>Maharashtra</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://womenchild.maharashtra.gov.in/en/" rel="noopener" target="_blank">Official Website ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('Mukhyamantri Mazi Ladki Bahin Yojana','Maharashtra women-focused welfare scheme. Use the official Women and Child Development Department website for current eligibility, notices and application guidance.','https://womenchild.maharashtra.gov.in/en/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="education" data-search="scholarship education student nsp national scholarship">
+<button class="save-corner" onclick="toggleSave(this,'National Scholarship Portal')" title="Save scheme">☆</button>
+<span class="scheme-label">Education</span>
+<h3>National Scholarship Portal (NSP)</h3>
+<p>Central portal for discovering and applying for eligible scholarship schemes. Academic Year 2026–27 services are available on the portal.</p>
+<div class="scheme-meta"><span>Students</span><span>Scholarships</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://scholarships.gov.in/" rel="noopener" target="_blank">Apply / Explore ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('National Scholarship Portal','Use NSP to view scholarship schemes, eligibility information, OTR services and application status. Never share your OTP, PIN or password with anyone.','https://scholarships.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="education" data-search="mahadbt scholarship freeship maharashtra student">
+<button class="save-corner" onclick="toggleSave(this,'MahaDBT Scholarships')" title="Save scheme">☆</button>
+<span class="scheme-label">Education • Maharashtra</span>
+<h3>MahaDBT Scholarships &amp; Benefits</h3>
+<p>Maharashtra's Direct Benefit Transfer portal includes multiple student scholarship, fee reimbursement and farmer-related schemes.</p>
+<div class="scheme-meta"><span>Scholarships</span><span>DBT</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://www.mahadbt.maharashtra.gov.in/" rel="noopener" target="_blank">MahaDBT Portal ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('MahaDBT Scholarships &amp; Benefits','Check the official Maharashtra MahaDBT portal for scheme lists, eligibility, applications and status.','https://www.mahadbt.maharashtra.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="agriculture" data-search="pm kisan farmer income support agriculture">
+<button class="save-corner" onclick="toggleSave(this,'PM-KISAN Samman Nidhi')" title="Save scheme">☆</button>
+<span class="scheme-label">Agriculture</span>
+<h3>PM-KISAN Samman Nidhi</h3>
+<p>Farmer-support programme with official services for registration-related information, status and eKYC.</p>
+<div class="scheme-meta"><span>Farmers</span><span>eKYC</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://pmkisan.gov.in/" rel="noopener" target="_blank">PM-KISAN ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('PM-KISAN Samman Nidhi','Use the official PM-KISAN portal to check current farmer services, eligibility information and eKYC requirements.','https://pmkisan.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="agriculture" data-search="fasal bima crop insurance pmfby">
+<button class="save-corner" onclick="toggleSave(this,'Pradhan Mantri Fasal Bima Yojana')" title="Save scheme">☆</button>
+<span class="scheme-label">Agriculture</span>
+<h3>Pradhan Mantri Fasal Bima Yojana</h3>
+<p>Crop insurance information, premium calculation, application and policy-status services for farmers.</p>
+<div class="scheme-meta"><span>Crop insurance</span><span>Farmers</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://pmfby.gov.in/" rel="noopener" target="_blank">PMFBY Portal ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('Pradhan Mantri Fasal Bima Yojana','The official portal provides crop-insurance information, premium calculation, application/status services and a farmer helpline.','https://pmfby.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="agriculture" data-search="enam mandi agriculture market price farmer">
+<button class="save-corner" onclick="toggleSave(this,'e-NAM')" title="Save scheme">☆</button>
+<span class="scheme-label">Agriculture</span>
+<h3>e-NAM — National Agriculture Market</h3>
+<p>Digital agriculture market platform supporting transparent market and trading information.</p>
+<div class="scheme-meta"><span>Market</span><span>e-NAM</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://enam.gov.in/web/" rel="noopener" target="_blank">e-NAM ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('e-NAM','Visit the official e-NAM portal for market information, registration and agriculture-market resources.','https://enam.gov.in/web/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="healthcare" data-search="ayushman bharat pmjay health hospital card">
+<button class="save-corner" onclick="toggleSave(this,'Ayushman Bharat PM-JAY')" title="Save scheme">☆</button>
+<span class="scheme-label">Healthcare</span>
+<h3>Ayushman Bharat PM-JAY</h3>
+<p>Public health coverage programme. Use the official National Health Authority portal to check current services and beneficiary information.</p>
+<div class="scheme-meta"><span>Health</span><span>PM-JAY</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://pmjay.gov.in/" rel="noopener" target="_blank">PM-JAY ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('Ayushman Bharat PM-JAY','Check the official PM-JAY portal for beneficiary services, hospital-related information and current programme guidance.','https://pmjay.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="healthcare" data-search="esanjeevani telemedicine doctor online">
+<button class="save-corner" onclick="toggleSave(this,'eSanjeevani')" title="Save scheme">☆</button>
+<span class="scheme-label">Healthcare</span>
+<h3>eSanjeevani Telemedicine</h3>
+<p>Government telemedicine platform for accessing remote healthcare services through supported channels.</p>
+<div class="scheme-meta"><span>Telemedicine</span><span>Healthcare</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://esanjeevani.mohfw.gov.in/" rel="noopener" target="_blank">eSanjeevani ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('eSanjeevani','Use the official eSanjeevani website for current telemedicine services and registration guidance.','https://esanjeevani.mohfw.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="employment" data-search="ncs jobs employment career national career service">
+<button class="save-corner" onclick="toggleSave(this,'National Career Service')" title="Save scheme">☆</button>
+<span class="scheme-label">Jobs</span>
+<h3>National Career Service (NCS)</h3>
+<p>Government career platform for jobseekers, career resources and employment services. NCS states that its services are free.</p>
+<div class="scheme-meta"><span>Jobs</span><span>Career</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://ncs.gov.in/" rel="noopener" target="_blank">NCS Portal ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('National Career Service','Use NCS for job-search and career services. Be cautious of anyone asking for money while claiming to represent NCS.','https://ncs.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="employment" data-search="skill india skill courses training jobs">
+<button class="save-corner" onclick="toggleSave(this,'Skill India Digital Hub')" title="Save scheme">☆</button>
+<span class="scheme-label">Skills</span>
+<h3>Skill India Digital Hub</h3>
+<p>Explore skilling, reskilling, courses, apprenticeships and career-development resources.</p>
+<div class="scheme-meta"><span>Training</span><span>Skills</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://www.skillindiadigital.gov.in/" rel="noopener" target="_blank">Skill India ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('Skill India Digital Hub','The official Skill India Digital Hub connects learners with skilling and career-development services, including courses and apprenticeship opportunities.','https://www.skillindiadigital.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="housing" data-search="pmay gramin housing rural home">
+<button class="save-corner" onclick="toggleSave(this,'PMAY-Gramin')" title="Save scheme">☆</button>
+<span class="scheme-label">Housing</span>
+<h3>Pradhan Mantri Awaas Yojana–Gramin</h3>
+<p>Rural housing programme information, including eligibility guidance and official survey resources.</p>
+<div class="scheme-meta"><span>Rural housing</span><span>PMAY-G</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://pmayg.nic.in/" rel="noopener" target="_blank">PMAY-G ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('Pradhan Mantri Awaas Yojana–Gramin','Visit the official PMAY-G portal for current housing programme information and eligibility/survey guidance.','https://pmayg.nic.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="business" data-search="pm vishwakarma artisan craftsman loan skill">
+<button class="save-corner" onclick="toggleSave(this,'PM Vishwakarma')" title="Save scheme">☆</button>
+<span class="scheme-label">Livelihood</span>
+<h3>PM Vishwakarma</h3>
+<p>Support programme for eligible traditional artisans and craftspeople, with official registration and scheme information.</p>
+<div class="scheme-meta"><span>Artisans</span><span>Livelihood</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://www.pmvishwakarma.gov.in/" rel="noopener" target="_blank">PM Vishwakarma ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('PM Vishwakarma','Use the official PM Vishwakarma portal to check current scheme details, eligibility and registration guidance.','https://www.pmvishwakarma.gov.in/')">Details</button>
+</div>
+</div>
+<div class="card scheme-card" data-category="digital" data-search="digilocker documents digital india certificates">
+<button class="save-corner" onclick="toggleSave(this,'DigiLocker')" title="Save scheme">☆</button>
+<span class="scheme-label">Digital Services</span>
+<h3>DigiLocker</h3>
+<p>Secure digital access to issued government documents and certificates through a Government of India platform.</p>
+<div class="scheme-meta"><span>Documents</span><span>Digital India</span></div>
+<div class="resource-actions">
+<a class="official-btn" href="https://www.digilocker.gov.in/" rel="noopener" target="_blank">DigiLocker ↗</a>
+<button class="save-btn" onclick="openSchemeInfo('DigiLocker','DigiLocker provides access to authentic digital documents issued by integrated government agencies.','https://www.digilocker.gov.in/')">Details</button>
+</div>
+</div>
+<div class="no-results" id="schemeNoResults">No matching scheme found. Try another keyword.</div>
+</div>
+</div>
+</section>
+<!-- EDUCATION -->
+<section id="education">
+<div class="container">
+<div class="section-head">
+<span class="tag">Digital Learning</span>
+<h2>Education &amp; Skill Centre</h2>
+<p>Learn practical digital skills for everyday life.</p>
+</div>
+<div class="cards"><div class="card course-card"><div class="course-top"><span>📱</span><span class="level">Beginner</span></div><h3>Smartphone Basics</h3><p>Phone settings, contacts, apps, internet, privacy and safe smartphone use.</p><div class="card-footer"><span>6 Lessons</span><button class="btn btn-primary course-start" data-course="Smartphone Basics">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>💻</span><span class="level">Beginner</span></div><h3>Computer Basics</h3><p>Files, folders, typing, internet, email and basic computer operations.</p><div class="card-footer"><span>8 Lessons</span><button class="btn btn-primary course-start" data-course="Computer Basics">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>📊</span><span class="level">Beginner</span></div><h3>MS Office &amp; Documents</h3><p>Word processing, spreadsheets, presentations and digital documents.</p><div class="card-footer"><span>8 Lessons</span><button class="btn btn-primary course-start" data-course="MS Office &amp; Documents">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>💳</span><span class="level">Beginner</span></div><h3>Digital Payments</h3><p>UPI awareness, PIN/OTP safety, QR payments and transaction verification.</p><div class="card-footer"><span>5 Lessons</span><button class="btn btn-primary course-start" data-course="Digital Payments">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>🔐</span><span class="level">Beginner</span></div><h3>Cyber Safety</h3><p>Passwords, phishing, scams, privacy and account security.</p><div class="card-footer"><span>7 Lessons</span><button class="btn btn-primary course-start" data-course="Cyber Safety">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>🤖</span><span class="level">Intermediate</span></div><h3>AI Basics for Students</h3><p>AI concepts, responsible use, prompting and fact-checking.</p><div class="card-footer"><span>7 Lessons</span><button class="btn btn-primary course-start" data-course="AI Basics for Students">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>🐍</span><span class="level">Intermediate</span></div><h3>Python Programming Basics</h3><p>Variables, conditions, loops, functions, lists and small programs.</p><div class="card-footer"><span>10 Lessons</span><button class="btn btn-primary course-start" data-course="Python Programming Basics">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>🗣️</span><span class="level">Beginner</span></div><h3>English Communication</h3><p>Introductions, everyday speaking, vocabulary and workplace communication.</p><div class="card-footer"><span>10 Lessons</span><button class="btn btn-primary course-start" data-course="English Communication">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>📈</span><span class="level">Intermediate</span></div><h3>Digital Marketing</h3><p>Social media, content, local business promotion and online presence.</p><div class="card-footer"><span>8 Lessons</span><button class="btn btn-primary course-start" data-course="Digital Marketing">View Course</button></div></div><div class="card course-card"><div class="course-top"><span>💼</span><span class="level">Intermediate</span></div><h3>Job &amp; Resume Skills</h3><p>Resume, job search, interview preparation and workplace basics.</p><div class="card-footer"><span>6 Lessons</span><button class="btn btn-primary course-start" data-course="Job &amp; Resume Skills">View Course</button></div></div></div><div class="course-learning-panel" hidden id="courseLearningPanel">
+<div class="course-panel-head">
+  <div><span class="tag">📚 Full Course</span><h3 id="coursePanelTitle">Course</h3><p id="coursePanelIntro" class="course-intro"></p></div>
+  <button class="btn btn-outline" onclick="closeCoursePanel()">Close</button>
+</div>
+<div class="course-progress"><div class="course-progress-bar" id="courseProgressBar"></div></div>
+<div class="course-reader">
+  <aside class="lesson-list" id="lessonList"></aside>
+  <main class="lesson-content">
+    <div class="lesson-number" id="lessonNumber"></div>
+    <h2 id="lessonTitle"></h2>
+    <div id="lessonBody"></div>
+    <div class="lesson-box"><strong>💡 Key Points</strong><ul id="lessonPoints"></ul></div>
+    <div class="lesson-box practice-box"><strong>📝 Practice / Activity</strong><p id="lessonPractice"></p></div>
+    <div class="quiz-box" id="lessonQuiz"></div>
+    <div class="lesson-nav">
+      <button class="btn btn-outline" id="prevLesson" onclick="changeLesson(-1)">← Previous</button>
+      <span id="lessonProgressText"></span>
+      <button class="btn btn-primary" id="nextLesson" onclick="changeLesson(1)">Next Lesson →</button>
+    </div>
+  </main>
+</div>
+<div class="course-panel-actions">
+  <button class="btn btn-primary" onclick="markCourseComplete()">Mark Course as Completed ✓</button>
+  <span id="courseCompleteStatus"></span>
+</div>
+</div>
+</div>
+<div class="section-links"><strong>🎓 Official student resources</strong><div class="resource-actions"><a class="official-btn" href="https://scholarships.gov.in/" rel="noopener" target="_blank">National Scholarship Portal ↗</a><a class="official-btn" href="https://www.mahadbt.maharashtra.gov.in/" rel="noopener" target="_blank">MahaDBT ↗</a><a class="official-btn" href="https://www.digilocker.gov.in/" rel="noopener" target="_blank">DigiLocker ↗</a></div></div>
+</section>
+<!-- AGRICULTURE -->
+<section class="hub" id="agriculture">
+<div class="container">
+<div class="section-head">
+<span class="tag">Smart Agriculture</span>
+<h2>Technology for Farmers</h2>
+<p>Digital awareness can help farmers access useful agricultural information.</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="icon">🌦️</div>
+<h3>Weather Awareness</h3>
+<p>Understand how weather information can support farming decisions.</p>
+</div>
+<div class="card">
+<div class="icon">🌱</div>
+<h3>Crop Information</h3>
+<p>Explore digital resources for crop education and farming knowledge.</p>
+</div>
+<div class="card">
+<div class="icon">💧</div>
+<h3>Smart Irrigation</h3>
+<p>Learn how sensors and technology can improve irrigation awareness.</p>
+</div>
+<div class="card">
+<div class="icon">📊</div>
+<h3>Market Awareness</h3>
+<p>Learn about checking market-price information from reliable sources.</p>
+</div>
+<div class="card">
+<div class="icon">📱</div>
+<h3>Digital Farming</h3>
+<p>Discover smartphones, apps and technology used in modern agriculture.</p>
+</div>
+<div class="card">
+<div class="icon">🏛️</div>
+<h3>Agriculture Schemes</h3>
+<p>Understand how to find and verify agriculture-related schemes.</p>
+</div>
+</div>
+</div>
+<div class="section-links"><strong>🌾 Official farmer resources</strong><div class="resource-actions"><a class="official-btn" href="https://pmkisan.gov.in/" rel="noopener" target="_blank">PM-KISAN ↗</a><a class="official-btn" href="https://pmfby.gov.in/" rel="noopener" target="_blank">Crop Insurance ↗</a><a class="official-btn" href="https://enam.gov.in/web/" rel="noopener" target="_blank">e-NAM ↗</a></div></div>
+</section>
+<!-- HEALTHCARE -->
+<section id="healthcare">
+<div class="container">
+<div class="section-head">
+<span class="tag">Digital Healthcare</span>
+<h2>Healthcare Information Centre</h2>
+<p>Technology can make healthcare information easier to discover.</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="icon">🩺</div>
+<h3>Telemedicine Awareness</h3>
+<p>Understand how remote healthcare services work and where to verify them.</p>
+</div>
+<div class="card">
+<div class="icon">🏥</div>
+<h3>Hospital Information</h3>
+<p>Learn how digital maps and official websites can help find healthcare facilities.</p>
+</div>
+<div class="card">
+<div class="icon">📅</div>
+<h3>Appointment Guidance</h3>
+<p>Awareness about online appointment systems.</p>
+</div>
+<div class="card">
+<div class="icon">📚</div>
+<h3>Health Education</h3>
+<p>Discover reliable health-information resources.</p>
+</div>
+</div>
+</div>
+<div class="section-links"><strong>🏥 Official health resources</strong><div class="resource-actions"><a class="official-btn" href="https://pmjay.gov.in/" rel="noopener" target="_blank">Ayushman Bharat ↗</a><a class="official-btn" href="https://esanjeevani.mohfw.gov.in/" rel="noopener" target="_blank">eSanjeevani ↗</a></div></div>
+</section>
+<!-- JOBS -->
+<section class="hub" id="jobs">
+<div class="container">
+<div class="section-head">
+<span class="tag">Employment</span>
+<h2>Jobs &amp; Skill Development</h2>
+<p>Build awareness about careers, skills and entrepreneurship.</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="icon">💼</div>
+<h3>Job Awareness</h3>
+<p>Learn how to discover employment opportunities safely.</p>
+<button class="btn btn-outline job-skill-btn" data-skill="Job Awareness">Explore</button></div>
+<div class="card">
+<div class="icon">📝</div>
+<h3>Resume Building</h3>
+<p>Learn how to create a simple professional resume.</p>
+<button class="btn btn-outline job-skill-btn" data-skill="Resume Building">Explore</button></div>
+<div class="card">
+<div class="icon">🎤</div>
+<h3>Interview Skills</h3>
+<p>Prepare for interviews and improve communication.</p>
+<button class="btn btn-outline job-skill-btn" data-skill="Interview Skills">Explore</button></div>
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Entrepreneurship</h3>
+<p>Understand how digital tools can support small businesses.</p>
+<button class="btn btn-outline job-skill-btn" data-skill="Entrepreneurship">Explore</button></div>
+<div class="card">
+<div class="icon">📱</div>
+<h3>Digital Business</h3>
+<p>Learn how local businesses can use digital platforms.</p>
+<button class="btn btn-outline job-skill-btn" data-skill="Digital Business">Explore</button></div>
+<div class="card">
+<div class="icon">🎓</div>
+<h3>Skill Courses</h3>
+<p>Explore technology and career-related learning paths.</p>
+<button class="btn btn-outline job-skill-btn" data-skill="Skill Courses">Explore</button></div>
+</div>
+</div>
+<div class="skill-center-box"><div><span class="tag">Student Skill Centre</span><h3>Build skills → practice → apply</h3><p>Use the courses above for learning, then use official Skill India and National Career Service portals for courses, jobs and apprenticeships.</p></div><div class="skill-actions"><button class="btn btn-primary" onclick="scrollToSection('education')">Browse Courses</button><a class="official-btn" href="https://www.skillindiadigital.gov.in/" rel="noopener" target="_blank">Skill India Courses ↗</a></div></div><div class="section-links"><strong>💼 Official career resources</strong><div class="resource-actions"><a class="official-btn" href="https://ncs.gov.in/" rel="noopener" target="_blank">National Career Service ↗</a><a class="official-btn" href="https://www.skillindiadigital.gov.in/" rel="noopener" target="_blank">Skill India ↗</a><a class="official-btn" href="https://www.pmvishwakarma.gov.in/" rel="noopener" target="_blank">PM Vishwakarma ↗</a></div></div>
+</section>
+<!-- EMERGENCY -->
+<section class="emergency" id="emergency">
+<div class="container">
+<div class="section-head">
+<span class="tag">Emergency Centre</span>
+<h2>Important Emergency Numbers</h2>
+<p>
+For emergencies, contact the appropriate official emergency service.
+This website only provides informational links.
+</p>
+</div>
+<div class="emergency-grid">
+<div class="emergency-card">
+<div class="emergency-icon">🚨</div>
+<div>
+<strong>112</strong>
+<span>National Emergency</span>
+</div>
+<a class="call" href="tel:112">CALL</a>
+</div>
+<div class="emergency-card">
+<div class="emergency-icon">👮</div>
+<div>
+<strong>100</strong>
+<span>Police</span>
+</div>
+<a class="call" href="tel:100">CALL</a>
+</div>
+<div class="emergency-card">
+<div class="emergency-icon">🚒</div>
+<div>
+<strong>101</strong>
+<span>Fire</span>
+</div>
+<a class="call" href="tel:101">CALL</a>
+</div>
+<div class="emergency-card">
+<div class="emergency-icon">🚑</div>
+<div>
+<strong>102</strong>
+<span>Ambulance</span>
+</div>
+<a class="call" href="tel:102">CALL</a>
+</div>
+<div class="emergency-card">
+<div class="emergency-icon">💻</div>
+<div>
+<strong>1930</strong>
+<span>Cyber Crime</span>
+</div>
+<a class="call" href="tel:1930">CALL</a>
+</div>
+<div class="emergency-card">
+<div class="emergency-icon">👶</div>
+<div>
+<strong>1098</strong>
+<span>Child Helpline</span>
+</div>
+<a class="call" href="tel:1098">CALL</a>
+</div>
+</div>
+</div>
+<div class="section-links"><strong>🚨 Government emergency &amp; reporting resources</strong><div class="resource-actions"><a class="official-btn" href="https://112.gov.in/" rel="noopener" target="_blank">112 India ↗</a><a class="official-btn" href="https://cybercrime.gov.in/" rel="noopener" target="_blank">Cyber Crime Portal ↗</a></div></div>
+</section>
+<!-- CYBER SAFETY -->
+<section id="safety">
+<div class="container">
+<div class="section-head">
+<span class="tag">Digital Safety</span>
+<h2>Stay Safe Online</h2>
+<p>Simple digital-safety habits can protect you and your family.</p>
+</div>
+<div class="safety-grid">
+<div class="do-card">
+<h3>✅ Do</h3>
+<ul>
+<li>🔐 Use strong passwords.</li>
+<li>📱 Keep your phone and apps updated.</li>
+<li>🔎 Verify websites before entering information.</li>
+<li>💳 Check payment details before confirming.</li>
+<li>📞 Report suspicious activity through official channels.</li>
+</ul>
+</div>
+<div class="do-card">
+<h3>❌ Don't</h3>
+<ul>
+<li>🚫 Never share OTPs or PINs.</li>
+<li>🚫 Don't click suspicious links.</li>
+<li>🚫 Don't trust random job offers asking for money.</li>
+<li>🚫 Don't share passwords.</li>
+<li>🚫 Don't install unknown applications.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section-links"><strong>🔐 Report online financial/cyber fraud</strong><a class="btn btn-primary" href="https://cybercrime.gov.in/" rel="noopener" target="_blank">National Cyber Crime Portal ↗</a></div>
+</section>
+<!-- UTILITIES -->
+<section class="hub" id="utilities">
+<div class="container">
+<div class="section-head">
+<span class="tag">Smart Utilities</span>
+<h2>Make Village Services Smarter</h2>
+<p>Awareness about digital reporting and community infrastructure.</p>
+</div>
+<div class="cards">
+<div class="card">
+<div class="icon">💧</div>
+<h3>Water</h3>
+<p>Water-supply awareness and digital reporting concepts.</p>
+</div>
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Electricity</h3>
+<p>Learn about digital electricity-service awareness.</p>
+</div>
+<div class="card">
+<div class="icon">💡</div>
+<h3>Streetlights</h3>
+<p>Community reporting and maintenance awareness.</p>
+</div>
+<div class="card">
+<div class="icon">♻️</div>
+<h3>Waste Management</h3>
+<p>Digital awareness for cleaner communities.</p>
+</div>
+<div class="card">
+<div class="icon">🛣️</div>
+<h3>Roads</h3>
+<p>Understand how digital reporting systems can support infrastructure.</p>
+</div>
+<div class="card">
+<div class="icon">🚰</div>
+<h3>Sanitation</h3>
+<p>Community awareness about sanitation and hygiene.</p>
+</div>
+</div>
+<br/>
+<div style="text-align:center">
+<button class="btn btn-primary" onclick="openModal('Report a Problem','This is a prototype complaint/reporting interface. It does not send a real complaint unless connected to a backend such as Firebase.')">
+Report a Problem — Prototype
+</button>
+</div>
+</div>
+<div class="section-links"><strong>💧 Report public-service grievances</strong><div class="resource-actions"><a class="official-btn" href="https://jaljeevanmission.gov.in/" rel="noopener" target="_blank">Jal Jeevan Mission ↗</a><a class="official-btn" href="https://pgportal.gov.in/" rel="noopener" target="_blank">CPGRAMS ↗</a><a class="official-btn" href="https://www.mahadiscom.in/" rel="noopener" target="_blank">MSEDCL ↗</a></div></div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="how">
+<div class="container">
+<div class="section-head">
+<span class="tag" style="color:#bde5cb">Simple Process</span>
+<h2>How Smart Village Works</h2>
+<p>Four simple steps towards digital empowerment.</p>
+</div>
+<div class="steps">
+<div class="step">
+<div class="step-number">1</div>
+<h3>Connect</h3>
+<p>Access digital platforms and connectivity.</p>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<h3>Learn</h3>
+<p>Build confidence with digital skills.</p>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<h3>Access</h3>
+<p>Find useful and verified information.</p>
+</div>
+<div class="step">
+<div class="step-number">4</div>
+<h3>Empower</h3>
+<p>Use technology to improve everyday life.</p>
+</div>
+</div>
+</div>
+<div class="section-links" style="background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.25)"><strong>🌐 Continue your digital journey</strong><a class="btn btn-outline" href="https://www.digitalindia.gov.in/" rel="noopener" target="_blank">Digital India ↗</a></div>
+</section>
+<!-- GALLERY -->
+<section>
+<div class="container">
+<div class="section-head">
+<span class="tag">Digital Village</span>
+<h2>Awareness Gallery</h2>
+<p>Visualizing technology-enabled rural communities.</p>
+</div>
+<div class="gallery">
+<div class="gallery-item" onclick="openImage(this.querySelector('img').src)">
+<img alt="Students learning technology" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<div class="gallery-caption">Digital Education</div>
+</div>
+<div class="gallery-item" onclick="openImage(this.querySelector('img').src)">
+<img alt="Farmer using technology" src="https://images.unsplash.com/photo-1523742815370-8b4d8e0f2c3b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<div class="gallery-caption">Smart Agriculture</div>
+</div>
+<div class="gallery-item" onclick="openImage(this.querySelector('img').src)">
+<img alt="Healthcare technology" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<div class="gallery-caption">Digital Healthcare</div>
+</div>
+<div class="gallery-item" onclick="openImage(this.querySelector('img').src)">
+<img alt="Computer learning" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<div class="gallery-caption">Digital Literacy</div>
+</div>
+<div class="gallery-item" onclick="openImage(this.querySelector('img').src)">
+<img alt="Community" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<div class="gallery-caption">Community Development</div>
+</div>
+<div class="gallery-item" onclick="openImage(this.querySelector('img').src)">
+<img alt="Village landscape" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<div class="gallery-caption">Connected Village</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NEWS -->
+<section class="hub">
+<div class="container">
+<div class="section-head">
+<span class="tag">Awareness Updates</span>
+<h2>Latest News &amp; Articles</h2>
+<p>Curated updates from official government sources. Use the source button to verify the full announcement.</p>
+</div>
+<div class="news-toolbar"><button class="filter-chip active" data-news-filter="All">All</button><button class="filter-chip" data-news-filter="Skill Development">Skills</button><button class="filter-chip" data-news-filter="Maharashtra Education">Education</button><button class="filter-chip" data-news-filter="Future Skills">Future Skills</button><button class="filter-chip" data-news-filter="Maharashtra Skills">Maharashtra</button><button class="filter-chip" data-news-filter="ITI &amp; Skills">ITI</button></div><div class="cards"><div class="card news-card" data-news-category="Skill Development"><div class="news-content"><span class="news-date">SKILL DEVELOPMENT • 03 Sep 2026</span><h3>Skill India Digital offers courses, certifications, skill centres, jobs and apprenticeships</h3><p>The official Skill India Digital platform is designed to provide career-focused skilling opportunities. It also supports multilingual access.</p><div class="news-actions"><button class="btn btn-outline news-read" data-content="The official Skill India Digital platform is designed to provide career-focused skilling opportunities. It also supports multilingual access." data-title="Skill India Digital offers courses, certifications, skill centres, jobs and apprenticeships">Read Summary</button><a class="btn btn-primary" href="https://www.skillindiadigital.gov.in/" rel="noopener" target="_blank">Open Skill India Digital ↗</a></div></div></div><div class="card news-card" data-news-category="Maharashtra Education"><div class="news-content"><span class="news-date">MAHARASHTRA EDUCATION • 25 Aug 2026</span><h3>DTE Maharashtra publishes 2026–27 admission updates and institute-level admission information</h3><p>The Directorate of Technical Education Maharashtra is publishing 2026–27 notices, including CAP-related and institute-level admission updates.</p><div class="news-actions"><button class="btn btn-outline news-read" data-content="The Directorate of Technical Education Maharashtra is publishing 2026–27 notices, including CAP-related and institute-level admission updates." data-title="DTE Maharashtra publishes 2026–27 admission updates and institute-level admission information">Read Summary</button><a class="btn btn-primary" href="https://dte.maharashtra.gov.in/" rel="noopener" target="_blank">Open DTE Maharashtra ↗</a></div></div></div><div class="card news-card" data-news-category="Future Skills"><div class="news-content"><span class="news-date">FUTURE SKILLS • 03 Aug 2026</span><h3>Government highlights AI, data analytics, cloud, cyber security and other emerging skills</h3><p>A recent PIB update says PMKVY 4.0 places emphasis on future skills and emerging technologies including AI, ML, robotics, cloud, IoT, data analytics and cyber security.</p><div class="news-actions"><button class="btn btn-outline news-read" data-content="A recent PIB update says PMKVY 4.0 places emphasis on future skills and emerging technologies including AI, ML, robotics, cloud, IoT, data analytics and cyber security." data-title="Government highlights AI, data analytics, cloud, cyber security and other emerging skills">Read Summary</button><a class="btn btn-primary" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2293792&amp;lang=1&amp;reg=1" rel="noopener" target="_blank">Read PIB Update ↗</a></div></div></div><div class="card news-card" data-news-category="Education"><div class="news-content"><span class="news-date">EDUCATION • 29 Jul 2026</span><h3>Skill-based and experiential learning continues to be promoted under NEP 2020</h3><p>A Ministry of Education update describes skill education through Samagra Shiksha and vocational/skill pathways in school and higher education.</p><div class="news-actions"><button class="btn btn-outline news-read" data-content="A Ministry of Education update describes skill education through Samagra Shiksha and vocational/skill pathways in school and higher education." data-title="Skill-based and experiential learning continues to be promoted under NEP 2020">Read Summary</button><a class="btn btn-primary" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2291276&amp;lang=1&amp;reg=3" rel="noopener" target="_blank">Read Education Update ↗</a></div></div></div><div class="card news-card" data-news-category="Maharashtra Skills"><div class="news-content"><span class="news-date">MAHARASHTRA SKILLS • 16 Jul 2026</span><h3>Maharashtra announces a 2026 skill-training opportunity under Mukhyamantri Yuva Karya Prashikshan Yojana</h3><p>The SARTHI announcement page lists the Maharashtra government skill/employment department scheme and its online application information.</p><div class="news-actions"><button class="btn btn-outline news-read" data-content="The SARTHI announcement page lists the Maharashtra government skill/employment department scheme and its online application information." data-title="Maharashtra announces a 2026 skill-training opportunity under Mukhyamantri Yuva Karya Prashikshan Yojana">Read Summary</button><a class="btn btn-primary" href="https://sarthi.maharashtra.gov.in/announcement/skill" rel="noopener" target="_blank">View Maharashtra Update ↗</a></div></div></div><div class="card news-card" data-news-category="ITI &amp; Skills"><div class="news-content"><span class="news-date">ITI &amp; SKILLS • 01 Apr 2026</span><h3>PM-SETU focuses on upgrading government ITIs with modern facilities and industry-aligned courses</h3><p>The 2026 PIB release highlights the PM-SETU initiative to upgrade government ITIs and strengthen industry-relevant training.</p><div class="news-actions"><button class="btn btn-outline news-read" data-content="The 2026 PIB release highlights the PM-SETU initiative to upgrade government ITIs and strengthen industry-relevant training." data-title="PM-SETU focuses on upgrading government ITIs with modern facilities and industry-aligned courses">Read Summary</button><a class="btn btn-primary" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2247753&amp;lang=1&amp;reg=3" rel="noopener" target="_blank">Read PIB Update ↗</a></div></div></div></div>
+</div>
+<div class="section-links"><strong>📰 Verify government information</strong><a class="official-btn" href="https://www.mygov.in/" rel="noopener" target="_blank">MyGov India ↗</a></div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<div class="section-head">
+<span class="tag">Get Involved</span>
+<h2>Community Feedback</h2>
+<p>Tell us what information would be useful for your community.</p>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+<h2>Let's Build Smarter Villages Together 🌱</h2>
+<p>
+This project is designed to create awareness and encourage
+responsible use of digital technology.
+</p>
+<div class="contact-item">
+<strong>📧 Email</strong><br/>
+info@smartvillage.demo
+</div>
+<div class="contact-item">
+<strong>📞 Help</strong><br/>
+1800-XXX-XXXX
+</div>
+<div class="contact-item">
+<strong>🌐 Platform</strong><br/>
+Digital Awareness Portal
+</div>
+</div>
+<form class="form" onsubmit="submitForm(event)">
+<div class="form-grid">
+<div class="field">
+<label>Name</label>
+<input placeholder="Your name" required="" type="text"/>
+</div>
+<div class="field">
+<label>Email</label>
+<input placeholder="Your email" required="" type="email"/>
+</div>
+<div class="field">
+<label>Village / Area</label>
+<input placeholder="Village or area" required="" type="text"/>
+</div>
+<div class="field">
+<label>Topic</label>
+<select required="">
+<option value="">Select topic</option>
+<option>Education</option>
+<option>Agriculture</option>
+<option>Healthcare</option>
+<option>Government Schemes</option>
+<option>Jobs</option>
+<option>Digital Safety</option>
+<option>Other</option>
+</select>
+</div>
+<div class="field full">
+<label>Message</label>
+<textarea placeholder="Your feedback or suggestion" required=""></textarea>
+</div>
+<div class="field full">
+<button class="btn btn-primary" type="submit">
+Send Feedback
+</button>
+</div>
+</div>
+<div class="success" id="successMessage">
+✅ Thank you! Your feedback has been recorded for this prototype.
+</div>
+</form>
+</div>
+</div>
+<div class="section-links"><strong>📍 Need a government service?</strong><a class="btn btn-primary" href="https://aaplesarkar.mahaonline.gov.in/en" rel="noopener" target="_blank">Aaple Sarkar ↗</a></div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="logo">
+<div class="logo-icon">🌱</div>
+<div>
+<h2>Smart Village</h2>
+<small>IT Enablement Project</small>
+</div>
+</div>
+<br/>
+<p>
+A college/project initiative focused on digital awareness,
+digital literacy and rural empowerment.
+</p>
+<br/>
+<p>
+⚠️ This is an educational awareness project and is
+not an official government portal.
+</p>
+</div>
+<div>
+<h3>Explore</h3>
+<div class="footer-links">
+<a href="#home">Home</a>
+<a href="#hub">Digital Hub</a>
+<a href="#schemes">Schemes</a>
+<a href="#education">Education</a>
+<a href="#jobs">Jobs</a>
+</div>
+</div>
+<div>
+<h3>Services</h3>
+<div class="footer-links">
+<a href="#agriculture">Agriculture</a>
+<a href="#healthcare">Healthcare</a>
+<a href="#emergency">Emergency</a>
+<a href="#safety">Cyber Safety</a>
+<a href="#utilities">Utilities</a>
+</div>
+</div>
+<div>
+<h3>Project</h3>
+<div class="footer-links">
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="javascript:openModal('Privacy Notice','This college project does not collect or process personal data on a server. Do not enter Aadhaar numbers, OTPs, passwords or bank details into this demo form.')">Privacy</a>
+<a href="javascript:openModal('Accessibility','Use your browser zoom, keyboard navigation and device accessibility tools. The website is designed to be responsive on mobile and desktop.')">Accessibility</a>
+</div>
+</div>
+</div>
+<div class="copyright">
+©️ 2026 Smart Village IT Enablement Project • College Project Demo
+</div>
+</div>
+</footer>
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-box">
+<button class="close" onclick="closeModal()">×</button>
+<h2 id="modalTitle"></h2>
+<div id="modalContent" style="color:var(--text);margin-top:15px"></div><div class="modal-links" id="modalLinks"></div>
+<br/>
+<button class="btn btn-primary" onclick="closeModal()">
+Got it
+</button>
+</div>
+</div>
+<!-- IMAGE MODAL -->
+<div class="modal" id="imageModal">
+<div class="modal-box" style="padding:10px;background:#111">
+<button class="close" onclick="closeImage()">×</button>
+<img alt="Gallery image" id="largeImage" style="width:100%;border-radius:18px;display:block"/>
+</div>
+</div>
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document.getElementById("navLinks").classList.toggle("show");
+
+}
+
+
+/* SCROLL */
+
+function scrollToSection(id){
+
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* MODAL */
+
+function openModal(title,content,url=""){
+
+    document.getElementById("modalTitle").textContent=title;
+    document.getElementById("modalContent").innerHTML=content;
+    const links=document.getElementById("modalLinks");
+    links.innerHTML=url ? `<a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">Open Official Website ↗</a>` : "";
+    document.getElementById("modal").classList.add("show");
+
+}
+
+function closeModal(){
+
+    document.getElementById("modal").classList.remove("show");
+
+}
+
+
+/* IMAGE */
+
+function openImage(src){
+
+    document.getElementById("largeImage").src=src;
+
+    document.getElementById("imageModal").classList.add("show");
+
+}
+
+function closeImage(){
+
+    document.getElementById("imageModal").classList.remove("show");
+
+}
+
+
+/* SEARCH */
+
+function searchResources(){
+
+    let search=document
+    .getElementById("globalSearch")
+    .value
+    .toLowerCase();
+
+    let resources=document.querySelectorAll(".resource");
+
+    resources.forEach(item=>{
+
+        let text=item
+        .getAttribute("data-name")
+        .toLowerCase();
+
+        item.style.display=text.includes(search)
+        ?"block"
+        :"none";
+
+    });
+
+}
+
+
+/* SCHEME FILTER */
+
+function filterSchemes(category,button){
+
+    document.querySelectorAll(".filter-btn")
+    .forEach(btn=>btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    document.querySelectorAll(".scheme-card")
+    .forEach(card=>{
+
+        if(category==="all" ||
+           card.dataset.category===category){
+
+            card.style.display="block";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* CONTACT FORM */
+
+function submitForm(event){
+
+    event.preventDefault();
+
+    document.getElementById("successMessage")
+    .style.display="block";
+
+    event.target.reset();
+
+}
+
+
+/* CLOSE MODAL ON BACKGROUND */
+
+window.addEventListener("click",function(event){
+
+    const modal=document.getElementById("modal");
+
+    const imageModal=document.getElementById("imageModal");
+
+    if(event.target===modal){
+
+        closeModal();
+
+    }
+
+    if(event.target===imageModal){
+
+        closeImage();
+
+    }
+
+});
+
+
+/* ESCAPE KEY */
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key==="Escape"){
+
+        closeModal();
+        closeImage();
+
+    }
+
+});
+
+
+
+const courseCatalog={"Smartphone Basics":{"intro":"A beginner-friendly course for using a smartphone confidently, safely and independently.","lessons":[["Getting Started","A smartphone is a small computer with a touchscreen, operating system, storage, camera and internet connectivity. The main parts are the screen, power/lock button, volume buttons, charging port, microphone, speaker and cameras. Android and iOS are common mobile operating systems. Learn the Home screen, app drawer, notification panel and quick settings.","Know the main hardware; understand Home, Back and Recent controls; lock and unlock the phone.","Turn the phone off and on, open Settings, adjust brightness and identify the charging port."],["Internet, Wi‑Fi & Mobile Data","Wi‑Fi connects a phone to a local wireless network, while mobile data uses a cellular network. Mobile data is useful outside Wi‑Fi but may be limited by a plan. Check the Wi‑Fi name before connecting and avoid unknown public networks for sensitive activities.","Difference between Wi‑Fi and mobile data; airplane mode; hotspot; data usage.","Connect to a trusted Wi‑Fi network and check which apps use the most mobile data."],["Apps, Updates & Permissions","Apps add features such as messaging, maps and learning. Install apps from trusted official app stores, check the developer name and reviews, and keep apps and the operating system updated. Permissions control access to the camera, microphone, contacts, location and files.","Install/update apps safely; understand permissions; remove unused apps; keep software updated.","Open an app's permissions and decide which permissions are actually necessary."],["Contacts, Camera & Useful Features","Contacts store names and phone numbers. The camera uses lenses and software to capture photos and videos; media can consume storage. Learn screenshots, copy/paste, sharing, search, voice typing and basic file management.","Save and edit contacts; take and organize photos; use screenshots and sharing.","Create a contact, take a photo, make a screenshot and share it with a trusted person."],["Privacy, OTPs & Smartphone Safety","Never share passwords, UPI PINs, banking PINs or OTPs with callers or messages. A legitimate service should not need your secret authentication code. Use a screen lock, updates, app permissions and device-finding features. Be cautious with urgent links and unknown calls.","Protect accounts; recognize common scams; secure the lock screen; report suspicious activity.","Review your lock method and permissions, then identify three warning signs in a sample scam message."]]},"Computer Basics":{"intro":"Learn the essential skills needed to operate a desktop or laptop and work with files and the internet.","lessons":[["Parts of a Computer","A computer system includes hardware and software. Hardware includes CPU, RAM, storage, keyboard, mouse and display. The operating system manages hardware and provides the user interface. Files are stored on local or removable storage.","Hardware vs software; CPU, RAM and storage; operating system basics.","Identify five hardware components on a computer."],["Keyboard, Mouse & Desktop","The mouse controls a pointer; the keyboard enters text and commands. Common actions include click, double-click, right-click, drag and drop, copy, paste, undo and save. Desktop environments contain windows, menus, taskbars and shortcuts.","Use common mouse actions; type efficiently; open and close applications.","Create a folder and practise copy, paste, rename and delete."],["Files & Folders","A file contains information such as text, images or documents. A folder organizes files. File extensions often indicate the type, such as .pdf, .jpg or .docx. Good naming and folder structure make files easier to find and back up.","Create folders; rename and move files; understand file types; use search.","Create a 'Study' folder with subfolders for Notes, Assignments and Projects."],["Internet & Email","A web browser retrieves web pages using internet protocols. Search engines help find information, but results should be evaluated. Email uses addresses, subjects, attachments and folders. Avoid opening suspicious attachments or links.","Search effectively; recognize HTTPS; compose email; attach files safely.","Write a practice email with a clear subject and attach a harmless document."],["Computer Security & Maintenance","Use updates, reputable security software, strong unique passwords and backups. Do not install unknown software or connect unknown USB devices. Shut down or restart correctly and keep important files backed up.","Updates, backups, passwords, safe downloads and basic troubleshooting.","Make a checklist for securing a shared family computer."]]},"MS Office & Documents":{"intro":"Build practical skills for documents, spreadsheets, presentations and PDFs.","lessons":[["Word Processing","Word processors are used to create and format documents. Learn headings, paragraphs, fonts, alignment, bullets, tables, page setup, headers and footers. Consistent formatting improves readability.","Create, edit and format a document; use headings and tables.","Create a one-page student profile with a heading, table and bullet list."],["Spreadsheets","A spreadsheet stores data in rows and columns. A cell can contain text, numbers or formulas. Basic formulas include SUM, AVERAGE, MIN and MAX. Relative references change when formulas are copied.","Enter data; format cells; use simple formulas and sort data.","Create a marksheet and calculate total and average."],["Presentations","Presentation software organizes information into slides. Use short points, readable fonts, relevant images and consistent layouts. A good presentation supports the speaker instead of replacing the speaker.","Create slides; use layouts; add images; present clearly.","Create three slides about your village: introduction, services and improvements."],["PDFs & Digital Documents","PDF preserves document layout across devices. Learn to export/print to PDF, check page order and avoid uploading confidential documents to unknown services.","Convert documents to PDF; check files before sharing; protect sensitive information.","Export an assignment as PDF and check the final pages before submission."],["Good Digital Documentation","Use meaningful filenames, folders and dates. Keep one original copy and backups. When sharing documents, verify the recipient and remove unnecessary personal information.","File organization, versioning, backups and responsible sharing.","Organize five sample documents using a consistent naming system."]]},"Digital Payments":{"intro":"Understand common digital payment concepts and learn how to use them safely.","lessons":[["How Digital Payments Work","Digital payments transfer money electronically through banks and payment systems. Common methods include UPI, cards, internet banking and mobile wallets. A transaction normally involves authentication and a confirmation or status.","UPI concept; bank account linkage; transaction status; receipts.","Explain the difference between a payment request and a payment you initiate."],["UPI & QR Payments","A QR code can contain payment information or a web link. Before paying, verify the receiver's name, amount and purpose. A UPI PIN is used to authorize certain transactions and must remain secret.","Scan carefully; verify receiver and amount; understand collect/payment requests.","Use a sample screen (not real money) and list what you would verify before pressing Pay."],["PINs, OTPs & Scams","An OTP is a one-time verification code. A UPI PIN is an authentication secret. Never disclose either to another person. Scammers may use urgency, fake refunds, fake customer care or screen-sharing requests.","Never share secrets; recognize social engineering; avoid remote-control apps from strangers.","Classify five sample messages as safe, suspicious or scam and explain why."],["Checking Transactions","After a payment, check the app or bank statement for the actual transaction status. Do not rely only on screenshots sent by another person. Keep reference numbers when reporting a problem.","Success vs pending vs failed; transaction history; reference number.","Create a mock transaction-checking checklist."],["What to Do After Fraud","If you suspect financial cyber fraud, contact the bank/payment provider through official channels and report quickly through the appropriate government cybercrime reporting mechanism. Do not continue communicating with the scammer.","Fast reporting; official contacts; preserve evidence; secure accounts.","Write down the steps you would take after receiving a suspicious payment request."]]},"Cyber Safety":{"intro":"A practical introduction to protecting accounts, devices, data and identity online.","lessons":[["Passwords & Account Security","Use long, unique passwords or passphrases for important accounts. A password manager can help create and store unique credentials. Enable two-factor authentication where available.","Unique passwords; password managers; 2FA; recovery options.","Create a fictional strong passphrase and list why it is stronger than a short password."],["Phishing & Social Engineering","Phishing tricks people into revealing information or clicking harmful links. Social engineering exploits trust, fear, urgency or curiosity. Check sender details, spelling, domain names and unexpected requests.","Recognize urgency, fake links, impersonation and suspicious attachments.","Inspect a sample email and highlight at least four red flags."],["Device & App Safety","Keep operating systems and apps updated. Install software from trusted sources and review permissions. Use screen locks and device encryption when available. Avoid unknown USB devices and unsecured downloads.","Updates; trusted sources; permissions; screen locks; backups.","Review installed apps and identify any that you no longer need."],["Privacy & Personal Data","Personal data can include contact details, location, photos, identifiers and financial information. Share only what is necessary. Check privacy settings and think about who can access posted content.","Data minimization; privacy settings; safe sharing; backups.","Review a fictional social-media profile and remove three pieces of unnecessary information."],["Reporting & Recovery","If an account is compromised, change credentials from a trusted device, sign out unknown sessions, enable stronger authentication and contact the provider. For cybercrime, use official reporting channels. Preserve screenshots, transaction details and messages.","Containment; recovery; evidence preservation; official reporting.","Make a personal cyber-incident checklist with five immediate actions."]]},"AI Basics for Students":{"intro":"Understand artificial intelligence and use generative AI responsibly for learning.","lessons":[["What Is AI?","Artificial intelligence refers to computer systems designed to perform tasks that normally require aspects of human intelligence, such as recognizing patterns, understanding language or making predictions. Machine learning is one approach where models learn patterns from data.","AI vs traditional programs; machine learning; examples of AI in daily life.","List five AI systems you have encountered and describe what each does."],["Generative AI & Large Language Models","Generative AI can create text, images, audio or code from prompts. Language models generate responses by predicting likely sequences from learned patterns. They can be useful but can also produce incorrect or invented information.","Generative AI; prompts; model limitations; hallucinations.","Ask an AI tool a factual question and verify the answer using a reliable source."],["Prompting for Learning","A useful prompt states the task, context, audience, format and constraints. Asking for examples, step-by-step explanations or quizzes can improve learning. Do not submit generated work blindly.","Clear prompts; context; output format; iterative prompting.","Write three prompts: explain, quiz and summarize, for the same study topic."],["Fact-Checking & Academic Integrity","AI output is not automatically true. Cross-check important facts with textbooks, official sites or trusted references. Follow your college's rules about AI assistance and disclose use when required.","Verification; citations; originality; responsible use.","Take a generated paragraph and verify three factual claims."],["Privacy & Responsible AI","Avoid entering passwords, OTPs, confidential documents or unnecessary personal information into AI tools. Consider bias, copyright, privacy and the impact of automated decisions.","Privacy; bias; responsible use; human review.","Create five rules for safe and ethical AI use in your studies."]]},"Python Programming Basics":{"intro":"A beginner programming course covering Python syntax, logic and small problem-solving programs.","lessons":[["Python & Variables","Python is a high-level programming language known for readable syntax. A variable is a name referring to a value. Common basic types include int, float, str and bool. Python uses indentation to define blocks.","Variables; data types; input and output; basic operators.","Write a program that asks for a name and age and prints a message."],["Conditions","Conditional statements let programs make decisions. if, elif and else select different blocks based on Boolean expressions. Comparison operators include ==, !=, >, <, >= and <=.","Boolean values; comparisons; if/elif/else; logical operators.","Write a program that checks whether a number is positive, negative or zero."],["Loops","Loops repeat instructions. for is commonly used to iterate over a sequence, while repeats while a condition remains true. Use a changing condition with while to avoid infinite loops.","for; while; range; break and continue.","Print numbers 1–10 and calculate their sum."],["Lists & Functions","Lists store ordered collections. Indexing starts at zero. Functions package reusable logic and can accept parameters and return values. Reuse reduces duplication and improves organization.","Lists; indexing; append; functions; parameters; return.","Create a function that calculates the area of a rectangle."],["Mini Project & Debugging","A small program should be broken into inputs, processing and outputs. Debugging means locating and correcting errors. Test normal, boundary and invalid inputs.","Problem decomposition; testing; syntax vs logic errors.","Build a simple marks calculator and test it with different inputs."]]},"English Communication":{"intro":"Develop practical communication skills for study, daily life and the workplace.","lessons":[["Self-Introduction","A good introduction is brief and relevant: name, education/work, skills, interests and goal. Speak clearly, maintain comfortable eye contact and avoid memorizing every word.","Structure; confidence; clarity; appropriate tone.","Prepare and speak a 60-second self-introduction."],["Everyday Conversation","Effective conversation involves listening, asking clear questions, responding appropriately and using polite language. Avoid interrupting and confirm information when necessary.","Listening; questions; polite expressions; clarity.","Practise a conversation between a student and a service representative."],["Professional Email","A professional email uses a meaningful subject, greeting, concise body, clear request and appropriate closing. Check spelling and attachments before sending.","Subject lines; structure; tone; attachments.","Write an email requesting information about an internship."],["Presentation Skills","A presentation should have a clear opening, logical sequence and conclusion. Use simple language, examples and readable slides. Practise timing.","Structure; delivery; visual support; confidence.","Give a two-minute presentation on a digital service."],["Interview Communication","Answer questions honestly and specifically. Use examples from projects, coursework or activities. Prepare common questions and ask a relevant question at the end.","STAR-style examples; body language; active listening; questions.","Practise answers to five common interview questions."]]},"Digital Marketing":{"intro":"Learn how digital channels help organizations communicate with customers and build an online presence.","lessons":[["Digital Marketing Basics","Digital marketing promotes products, services or ideas using digital channels such as websites, search, email and social media. The goal may be awareness, engagement, leads or sales.","Channels; audience; goals; online presence.","Choose a local business and identify two realistic digital goals."],["Content Creation","Useful content is relevant, accurate and designed for a specific audience. Formats include posts, short videos, images, articles and guides. A content calendar helps maintain consistency.","Audience; message; formats; content calendar.","Create a seven-day content plan for a local shop."],["Social Media & Safety","Social platforms can help reach audiences but require responsible posting. Avoid misleading claims, copyright violations and sharing private customer data. Secure business accounts with strong authentication.","Responsible posting; privacy; account security; moderation.","Review a fictional business post and improve its clarity and safety."],["Web Presence & Search","A website or business profile should provide accurate contact details, services, hours and useful information. Search visibility depends on relevance, quality content and technical factors.","Business profile; useful information; search basics.","Draft the information a village service centre should put on its website."],["Analytics & Improvement","Analytics measure actions such as views, clicks, engagement or conversions. Compare results against goals and improve content based on evidence rather than guesses.","Metrics; goals; experimentation; improvement.","Choose three metrics for a campaign promoting a student event."]]},"Job & Resume Skills":{"intro":"Learn the practical basics of preparing for internships, jobs and professional life.","lessons":[["Career Planning","Career planning starts with interests, strengths, skills and realistic goals. Compare roles by required skills, qualifications, location and growth. Build a learning plan around gaps.","Self-assessment; role research; skill gaps; goals.","Choose one target role and list five skills it requires."],["Resume Basics","A resume should be clear, truthful and tailored to the opportunity. Typical sections include contact details, summary/objective, education, skills, projects, experience and achievements.","One-page structure; relevant skills; measurable project details; proofreading.","Create a one-page student resume using a fictional profile."],["Finding Genuine Opportunities","Use trusted company career pages and recognized employment portals. Be cautious when a recruiter asks for money, OTPs, bank passwords or unnecessary personal information.","Job search; verification; scam awareness; professional communication.","Compare two fictional job advertisements and identify warning signs."],["Interview Preparation","Prepare a short introduction, project explanations and examples of teamwork or problem-solving. Listen carefully and answer directly. Research the organization before the interview.","Common questions; project explanation; STAR examples; questions for interviewer.","Practise explaining one college project in 60 seconds."],["Workplace Readiness","Professionalism includes punctuality, communication, teamwork, reliability, respectful behavior and continuous learning. Keep records of applications and follow up politely.","Work etiquette; teamwork; time management; learning mindset.","Create a weekly job/internship application tracker."]]}};
+
+let activeCourse=null, activeLesson=0;
+function startCourse(title){
+  const c=courseCatalog[title]; if(!c)return;
+  activeCourse=title; activeLesson=0;
+  document.getElementById('coursePanelTitle').textContent=title;
+  document.getElementById('coursePanelIntro').textContent=c.intro;
+  const panel=document.getElementById('courseLearningPanel');
+  panel.hidden=false;
+  renderLessonList();
+  renderLesson();
+  panel.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function renderLessonList(){
+  const c=courseCatalog[activeCourse];
+  const list=document.getElementById('lessonList');
+  list.innerHTML=c.lessons.map((l,i)=>`<button class="lesson-item ${i===activeLesson?'active':''}" onclick="goToLesson(${i})">Lesson ${i+1}<br><span style="font-weight:600">${l[0]}</span></button>`).join('');
+}
+function goToLesson(i){activeLesson=i;renderLessonList();renderLesson();}
+function renderLesson(){
+  const c=courseCatalog[activeCourse], l=c.lessons[activeLesson];
+  document.getElementById('lessonNumber').textContent=`Lesson ${activeLesson+1} of ${c.lessons.length}`;
+  document.getElementById('lessonTitle').textContent=l[0];
+  const paragraphs=l[1].split('\n').filter(Boolean);
+  document.getElementById('lessonBody').innerHTML=paragraphs.map(x=>`<p>${x}</p>`).join('');
+  const points=l[2].split(';');
+  document.getElementById('lessonPoints').innerHTML=points.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('lessonPractice').textContent=l[3];
+  const pct=Math.round(((activeLesson+1)/c.lessons.length)*100);
+  document.getElementById('courseProgressBar').style.width=pct+'%';
+  document.getElementById('lessonProgressText').textContent=`${activeLesson+1} / ${c.lessons.length}`;
+  document.getElementById('prevLesson').disabled=activeLesson===0;
+  document.getElementById('nextLesson').textContent=activeLesson===c.lessons.length-1?'Finish Course ✓':'Next Lesson →';
+  const quizPrompts={
+    "Smartphone Basics":["Which should remain secret?","A","Your OTP/PIN","Your phone model","Your wallpaper"],
+    "Computer Basics":["Which is used to organize files?","A","Folder","Monitor","Keyboard"],
+    "MS Office & Documents":["Which function commonly adds numbers in a spreadsheet?","A","SUM","PHOTO","PRINT"],
+    "Digital Payments":["What should you do before confirming a payment?","A","Verify receiver and amount","Share your PIN","Trust a screenshot"],
+    "Cyber Safety":["What is phishing?","A","A trick to steal information","A phone update","A backup method"],
+    "AI Basics for Students":["What should you do with important AI-generated facts?","A","Verify them","Publish immediately","Assume they are always true"],
+    "Python Programming Basics":["Which keyword starts a condition in Python?","A","if","loop","check"],
+    "English Communication":["What is a good professional email subject?","A","Clear and specific","Blank","Only emojis"],
+    "Digital Marketing":["Why use a content calendar?","A","To plan content consistently","To delete analytics","To hide a website"],
+    "Job & Resume Skills":["What is important on a resume?","A","Truthful relevant information","Fake experience","Unrelated passwords"]
+  };
+  const q=quizPrompts[activeCourse];
+  document.getElementById('lessonQuiz').innerHTML=`<strong>🧠 Quick Check</strong><div class="quiz-question">${q[0]}</div><div class="quiz-options"><button class="quiz-option" onclick="answerQuiz(this,true)">${q[2]}</button><button class="quiz-option" onclick="answerQuiz(this,false)">${q[3]}</button><button class="quiz-option" onclick="answerQuiz(this,false)">${q[4]}</button></div><div class="quiz-feedback" id="quizFeedback"></div>`;
+}
+function answerQuiz(btn,correct){
+  document.querySelectorAll('.quiz-option').forEach(x=>x.disabled=true);
+  btn.classList.add(correct?'correct':'wrong');
+  document.getElementById('quizFeedback').textContent=correct?'✅ Correct!':'❌ Not quite. Review the lesson and try again.';
+}
+function changeLesson(step){
+  if(!activeCourse)return;
+  const total=courseCatalog[activeCourse].lessons.length;
+  const next=activeLesson+step;
+  if(next>=0 && next<total){activeLesson=next;renderLessonList();renderLesson();document.querySelector('.lesson-content').scrollIntoView({behavior:'smooth',block:'start'});}
+  else if(next>=total){markCourseComplete();}
+}
+function closeCoursePanel(){document.getElementById('courseLearningPanel').hidden=true;}
+function markCourseComplete(){
+  if(!activeCourse)return;
+  localStorage.setItem('courseDone_'+activeCourse,'1');
+  document.getElementById('courseProgressBar').style.width='100%';
+  document.getElementById('courseCompleteStatus').textContent='Course completed ✓';
+}
+function scrollToSection(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+document.querySelectorAll('.course-start').forEach(b=>b.addEventListener('click',()=>startCourse(b.dataset.course)));
+document.querySelectorAll('.job-skill-btn').forEach(b=>b.addEventListener('click',()=>{const t=b.dataset.skill;const map={"Job Awareness":"Learn how to search genuine vacancies and avoid job scams.","Resume Building":"Create a simple one-page resume with education, skills, projects and contact details.","Interview Skills":"Practice introductions, common interview questions and professional communication.","Entrepreneurship":"Understand business ideas, customer needs, digital promotion and basic planning.","Digital Business":"Learn how local businesses can use online profiles, payments and customer communication.","Skill Courses":"Explore technology, future skills, apprenticeships and certifications through official portals."};openModal(t,map[t]||'Explore this skill area and use the official Skill India portal for verified opportunities.','https://www.skillindiadigital.gov.in/')}));
+document.querySelectorAll('.news-read').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.title,b.dataset.content)));
+document.querySelectorAll('.filter-chip').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter-chip').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.newsFilter;document.querySelectorAll('.news-card').forEach(c=>c.classList.toggle('hidden-news',f!=='All'&&c.dataset.newsCategory!==f));}));
+
+
+/* ===== DIGITAL VILLAGE HUB DETAILS ===== */
+const hubInfo={
+ "Government Services":{title:"Government Services",intro:"Use verified digital portals to access public services, applications and grievance systems.",points:["Find government schemes and eligibility information.","Use Maharashtra's Aaple Sarkar for citizen services.","Use CPGRAMS for public grievances.","Use DigiLocker for accessing eligible digital documents.","Never share OTP, PIN, password or Aadhaar details with unknown people."],links:[["Aaple Sarkar","https://aaplesarkar.mahaonline.gov.in/en"],["DigiLocker","https://www.digilocker.gov.in/"],["CPGRAMS","https://pgportal.gov.in/"]]},
+ "Agriculture":{title:"Smart Agriculture",intro:"Digital tools can help farmers make better-informed decisions about crops, weather, insurance and markets.",points:["Check weather information before important farm activities.","Explore PM-KISAN information and e-KYC guidance.","Use PMFBY for crop-insurance information and claim-related services.","Use e-NAM to understand digital agricultural markets.","Compare information with official agriculture departments before acting."],links:[["PM-KISAN","https://pmkisan.gov.in/"],["PMFBY","https://pmfby.gov.in/"],["e-NAM","https://enam.gov.in/web/"]]},
+ "Healthcare":{title:"Digital Healthcare",intro:"Digital healthcare can improve access to health information and telemedicine, while medical decisions should remain with qualified professionals.",points:["Learn about Ayushman Bharat PM-JAY and eligibility/services.","Use eSanjeevani for official telemedicine services where available.","Keep important health documents safely stored.","Do not share sensitive medical information on unknown websites.","For emergencies, use the appropriate emergency service instead of waiting for online advice."],links:[["PM-JAY","https://pmjay.gov.in/"],["eSanjeevani","https://esanjeevani.mohfw.gov.in/"]]},
+ "Education":{title:"Digital Education",intro:"Students can use digital tools to learn, practice skills and discover scholarships and verified learning opportunities.",points:["Start with smartphone, computer and internet basics.","Practice documents, presentations and spreadsheets.","Learn programming and AI fundamentals step by step.","Check the National Scholarship Portal for scholarship information.","Use DigiLocker for eligible digital academic documents."],links:[["National Scholarship Portal","https://scholarships.gov.in/"],["DigiLocker","https://www.digilocker.gov.in/"],["Skill India Digital","https://www.skillindiadigital.gov.in/"]]},
+ "Jobs & Skills":{title:"Jobs & Skills",intro:"Build employability through practical skills, a good resume, interview preparation and safe job searching.",points:["Create a clear one-page resume with education, skills and projects.","Practice communication and common interview questions.","Learn digital, technical and entrepreneurship skills.","Use National Career Service to explore employment services.","Never pay unknown people for a promised job or share OTPs/passwords."],links:[["National Career Service","https://ncs.gov.in/"],["Skill India Digital","https://www.skillindiadigital.gov.in/"],["PM Vishwakarma","https://www.pmvishwakarma.gov.in/"]] }
+};
+function openHubInfo(key){const x=hubInfo[key];if(!x)return;const list=x.points.map(p=>`<li>${p}</li>`).join('');const links=x.links.map(l=>`<a class="btn btn-primary" href="${l[1]}" target="_blank" rel="noopener">${l[0]} ↗</a>`).join('');openModal(x.title,`<p>${x.intro}</p><h4 style="margin-top:18px">What you can do</h4><ul class="hub-info-list">${list}</ul>`,"");document.getElementById('modalLinks').innerHTML=links;}
+
+/* ===== DARK / LIGHT MODE ===== */
+function applyTheme(theme){document.body.classList.toggle('dark-mode',theme==='dark');const b=document.querySelector('.theme-toggle');if(b){b.textContent=theme==='dark'?'☀️':'🌙';b.title=theme==='dark'?'Switch to light mode':'Switch to dark mode';}localStorage.setItem('smartVillageTheme',theme);}
+function toggleTheme(){applyTheme(document.body.classList.contains('dark-mode')?'light':'dark');}
+(function(){applyTheme(localStorage.getItem('smartVillageTheme')||'light');})();
+
+/* ===== LANGUAGE SWITCHER ===== */
+const translations={
+ English:{nav:['Home','Digital Hub','Schemes','Education','Agriculture','Healthcare','Jobs','Emergency','Contact'],hub:'Your Digital Village Hub',hubDesc:'Search and explore information designed to make digital life easier.',learn:'Learn More →'},
+ Hindi:{nav:['होम','डिजिटल हब','योजनाएँ','शिक्षा','कृषि','स्वास्थ्य','नौकरियाँ','आपातकाल','संपर्क'],hub:'आपका डिजिटल विलेज हब',hubDesc:'डिजिटल जीवन को आसान बनाने वाली जानकारी खोजें और समझें।',learn:'और जानें →'},
+ Urdu:{nav:['ہوم','ڈیجیٹل ہب','اسکیمز','تعلیم','زراعت','صحت','ملازمتیں','ایمرجنسی','رابطہ'],hub:'آپ کا ڈیجیٹل ولیج ہب',hubDesc:'ڈیجیٹل زندگی کو آسان بنانے والی معلومات تلاش کریں اور سمجھیں۔',learn:'مزید جانیں →'}
+};
+function changeLanguage(lang){const t=translations[lang]||translations.English;document.querySelectorAll('#navLinks a').forEach((a,i)=>{if(t.nav[i])a.textContent=t.nav[i];});const hs=document.querySelector('#hub .section-head h2');const hp=document.querySelector('#hub .section-head p');if(hs)hs.textContent=t.hub;if(hp)hp.textContent=t.hubDesc;document.querySelectorAll('#hub .learn').forEach(a=>{if(a.textContent.includes('Learn')||a.textContent.includes('जान')||a.textContent.includes('جان'))a.textContent=t.learn;});localStorage.setItem('smartVillageLanguage',lang);}
+(function(){const lang=localStorage.getItem('smartVillageLanguage')||'English';const sel=document.getElementById('languageSelect');if(sel)sel.value=lang;changeLanguage(lang);})();
+
+/* ===== FRONT-END LOGIN ===== */
+
+function loginDemo(e){e.preventDefault();const name=document.getElementById('loginName').value.trim();if(!name)return;localStorage.setItem('smartVillageUser',name);closeModal();showToast('Welcome, '+name+'! Login successful ✓');}
+function logoutDemo(){localStorage.removeItem('smartVillageUser');closeModal();showToast('You have been logged out.');}
+function showToast(message){let t=document.getElementById('smartToast');if(!t){t=document.createElement('div');t.id='smartToast';t.style.cssText='position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#123b27;color:white;padding:12px 18px;border-radius:12px;z-index:6000;font-size:13px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.2)';document.body.appendChild(t);}t.textContent=message;t.style.display='block';clearTimeout(window.smartToastTimer);window.smartToastTimer=setTimeout(()=>t.style.display='none',2800);}
+
+</script>
+<button aria-label="Back to top" class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</body>
+</html>
